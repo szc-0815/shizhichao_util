@@ -52,15 +52,17 @@ public class FileUtil {
 	 * @return: String      
 	 * @throws
 	 */
+	
 	public static String readTextFileByLine(String pathname) {
 		BufferedReader br = null;
 		StringBuffer sb = new StringBuffer();
+		String str=null;
 		try {
 			br = new BufferedReader(new FileReader(new File(pathname)));
-			do {
-				sb.append(br.readLine());
-				sb.append("\r\n");
-			}while(br.read()!=-1);
+		while((str=br.readLine())!=null) {
+			sb.append(str);
+			sb.append("\r\n");
+		}
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 			return null;
