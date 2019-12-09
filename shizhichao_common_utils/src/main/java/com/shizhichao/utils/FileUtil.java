@@ -53,6 +53,7 @@ public class FileUtil {
 	 * @throws
 	 */
 	
+	
 	public static String readTextFileByLine(String pathname) {
 		BufferedReader br = null;
 		StringBuffer sb = new StringBuffer();
