@@ -49,6 +49,33 @@ public class StringUtil {
 		String regex = "1[3578]\\d{9}";
 		return str.matches(regex);
 	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	//周考二判断手机号码是否为数值，开始为1
+	public static boolean judgeTelePhoneIsOk(String str) {
+		String regex="1[3575]\\d{9}";
+		
+		return str.matches(regex);
+		
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	/**
 	 * @Title: isEmail   
 	 * @Description: 验证是否为邮箱   
