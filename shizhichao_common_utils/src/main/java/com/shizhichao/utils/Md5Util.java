@@ -2,13 +2,11 @@ package com.shizhichao.utils;
 
 import java.security.MessageDigest;
 
-/**
- * @Description:采用MD5加密解密   
- * @author: zhanggm1002
- * @date:   2019年12月13日 上午8:46:51
- */
+
+//采用MD5加密解密
 public class Md5Util {
-    /**
+
+	 /**
      * @Title: string2MD5   
      * @Description: MD5加码 生成32位md5码  
      * @param: @param inStr
