@@ -88,9 +88,10 @@ public class FileUtil {
 		List<String> strList = new ArrayList<>();
 		try {
 			br = new BufferedReader(new FileReader(new File(pathname)));
-			do {
-				strList.add(br.readLine());
-			}while(br.read()!=-1);
+			String i="";
+			while((i=br.readLine())!=null){
+				strList.add(i);
+			};
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 			return null;
@@ -152,7 +153,7 @@ public class FileUtil {
 	}
 	
 	public static void main(String[] args) {
-		System.out.println(getSystemTempDirectory());
+		System.out.println(FileUtil.readTextFileOfList("C:\\Users\\VULCAN\\Desktop\\car.txt"));
 	}
 	
 	
