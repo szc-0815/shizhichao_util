@@ -57,7 +57,7 @@ public class FileUtil {
 	public static String readTextFileByLine(String pathname) {
 		BufferedReader br = null;
 		StringBuffer sb = new StringBuffer();
-		String str=null;
+		String str="";
 		try {
 			br = new BufferedReader(new FileReader(new File(pathname)));
 		while((str=br.readLine())!=null) {
