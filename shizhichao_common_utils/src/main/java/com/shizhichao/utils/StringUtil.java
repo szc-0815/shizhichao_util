@@ -69,7 +69,7 @@ public class StringUtil {
 	//判断是否为数字
 	public static boolean isNumber(String str) {
 		
-		String regex="[0-9]{1,9}";
+		String regex="\\d+||\\d+.\\d+";
 		return str.matches(regex);
 		
 	}

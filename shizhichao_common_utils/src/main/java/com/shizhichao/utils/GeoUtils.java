@@ -26,6 +26,52 @@ public class GeoUtils {
         s = Math.round(s * 10000) / 10000;
         return s;
     }
+    
+    
+    public static int getDistance1(double lng1,double lat1,double lng2,double lat2){
+    	/** toRadians() 方法用于将角度转换为弧度 **/
+        double radLat1 = Math.toRadians(lat1);
+        double radLat2 = Math.toRadians(lat2);
+        double a = radLat1 - radLat2;
+        double b = Math.toRadians(lng1) - Math.toRadians(lng2);
+        /** asin() 方法返回一个数值的反正弦(单位为弧度) **/
+        /** pow() 函数返回基数(base)的指数(exponent)次幂 **/
+        /** sin(x) 返回x的正玄值 **/
+        /** cos(x) 返回x的余弦值 **/
+        double s = 2 * Math.asin(Math.sqrt(Math.pow(Math.sin(a / 2), 2) + Math.cos(radLat1)
+                * Math.cos(radLat2) * Math.pow(Math.sin(b / 2), 2)));
+        s = s * 6378137.0;// 取WGS84标准参考椭球中的地球长半径(单位:m)
+        s = Math.round(s * 10000) / 10000;
+        
+        Integer huan=0;
+        if(s<=15000) {
+        	return huan=2;
+        }else if(s>15000&&s<30000) {
+        	return huan=3;
+        }else if(s>30000&&s<40000) {
+        	return huan=4;
+        }else if(s>40000&&s<50000) {
+        	return huan=5;
+        }else if(s>50000&&s<60000) {
+        	return huan=6;
+        }
+        
+        
+        return huan;
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     /**
      * 计算TP值
      * @param curPoint      当前点
@@ -68,6 +114,6 @@ public class GeoUtils {
     }
     
     public static void main(String[] args) {
-        System.out.println(getDistance(121.446014,31.215937,121.446028464238,31.2158502442799  ));
+        System.out.println(getDistance1(121.446014,31.215937,121.446028464238,31.2158502442799  ));
     }
 }
