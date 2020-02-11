@@ -8,8 +8,11 @@
   <properties>
   	<junit-version>4.12</junit-version>
   	<servlet-api.version>2.5</servlet-api.version>
+  	<!-- 分页助手 -->
+		<pagehelper-version>5.1.2</pagehelper-version>
   </properties>
   <dependencies>
+ 	 
  		 <!-- elasticsearch和spring的整合包 -->
 		<dependency>
 			<groupId>org.springframework.data</groupId>
@@ -33,6 +36,14 @@
 			<artifactId>junit</artifactId>
 			<version>${junit-version}</version>
 			<scope>test</scope>
+		</dependency>
+		<!-- mybaits pagehelper 分页助手 -->
+		
+		<dependency>
+			<groupId>com.github.pagehelper</groupId>
+			<artifactId>pagehelper</artifactId>
+			<version>${pagehelper-version}</version>
+		
 		</dependency>
 			
   </dependencies>
