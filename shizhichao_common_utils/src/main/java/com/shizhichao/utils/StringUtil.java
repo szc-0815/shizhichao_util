@@ -75,12 +75,11 @@ public class StringUtil {
 	}
 	
 	
-	
-	
-	
-	
-	
-	
+	public static boolean isUrl(String str) {
+		String url="[a-zA-Z]+://[^\\s]*";
+		return str.matches(url);
+		
+	}
 	
 	/**
 	 * @Title: isEmail   
