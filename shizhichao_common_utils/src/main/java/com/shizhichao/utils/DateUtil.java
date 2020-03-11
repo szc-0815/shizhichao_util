@@ -228,12 +228,7 @@ public class DateUtil {
 		
 	}
 	
-	public static void main(String[] args) throws ParseException {
-		Date firstDateInMonth = getLastDateInMonth(new Date());
-		System.out.println();
-		Date theDate = dateFormat.parse("2019-12-20");
-		System.out.println(isInWeek(theDate));
-	}
+	
 	
 	
 	
@@ -283,7 +278,31 @@ public class DateUtil {
 	
 	
 	
-	
+			public static void main(String[] args) throws ParseException {
+		
+		/*
+		 * Date firstDateInMonth = getLastDateInMonth(new Date()); System.out.println();
+		 * Date theDate = dateFormat.parse("2019-12-20");
+		 * System.out.println(isInWeek(theDate));
+		 * 
+		 */
+				
+		
+		  Date parse = dateFormat.parse("2020-05-18 03:04:22");
+		  
+		  Date firstDateInMonth2 = getFirstDateInMonth(parse);
+		  
+		  
+		  System.out.println(dateTimeFormat.format(firstDateInMonth2)+"-------");
+		 
+				
+		  Date parse2 = dateFormat.parse("2020-04-05 04:02:23");
+		  
+		  Date lastDateInMonth = getLastDateInMonth(parse2);
+		  
+		  System.out.println(dateTimeFormat.format(lastDateInMonth));
+				
+			}
 	
 	
 	

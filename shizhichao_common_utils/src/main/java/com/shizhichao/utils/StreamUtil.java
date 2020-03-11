@@ -91,8 +91,16 @@ public class StreamUtil {
 	}
 
 	public static void main(String[] args) {
-		String readTextFile = readTextFile("C:\\Users\\VULCAN\\git\\shizhichao_util\\shizhichao_common_utils\\pom.xml");
-		writeTextFile(readTextFile, "C:\\Users\\VULCAN\\git\\copyFile\\copyPom.xml",false);
+		/*
+		 * String readTextFile = readTextFile(
+		 * "C:\\Users\\VULCAN\\git\\shizhichao_util\\shizhichao_common_utils\\pom.xml");
+		 * System.out.println(readTextFile); writeTextFile(readTextFile,
+		 * "C:\\Users\\VULCAN\\git\\copyFile\\copyPom.xml",false);
+		 */
+		
+		String readTextFile = readTextFile("C:\\Users\\VULCAN\\git\\shizhichao_util\\shizhichao_common_utils\\src\\main\\resources\\text.txt");
+		System.out.println(readTextFile);
+		
 	}
 
 }

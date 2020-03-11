@@ -74,12 +74,21 @@ public class StringUtil {
 		
 	}
 	
-	
+	//判断网址
 	public static boolean isUrl(String str) {
 		String url="[a-zA-Z]+://[^\\s]*";
 		return str.matches(url);
 		
 	}
+	
+	//判断身份证号
+	public static boolean isShenFenZhangHao(String str) {
+		String url="/^[1-9]\\d{5}(18|19|([23]\\d))\\d{2}((0[1-9])|(10|11|12))(([0-2][1-9])|10|20|30|31)\\d{3}[0-9Xx]$/";
+		return str.matches(url);
+		
+	}
+	
+	
 	
 	/**
 	 * @Title: isEmail   

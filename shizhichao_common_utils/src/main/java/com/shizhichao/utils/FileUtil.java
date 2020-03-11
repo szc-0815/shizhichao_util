@@ -225,7 +225,11 @@ public class FileUtil {
 	}
 	
 	public static void main(String[] args) {
-		System.out.println(FileUtil.readTextFileOfList("C:\\Users\\VULCAN\\Desktop\\car.txt"));
+//		System.out.println(FileUtil.readTextFileOfList("C:\\Users\\VULCAN\\Desktop\\car.txt"));
+		
+		
+		System.out.println(getExtName("C:\\\\Users\\\\VULCAN\\\\Desktop\\\\car.txt"));
+		
 	}
 	
 	
