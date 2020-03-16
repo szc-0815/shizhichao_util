@@ -45,6 +45,12 @@
 			<version>${pagehelper-version}</version>
 		
 		</dependency>
+		
+		<dependency>
+	  		<groupId>org.springframework</groupId>
+	  		<artifactId>spring-web</artifactId>
+	  		<version>5.1.5.RELEASE</version>
+	  	</dependency>
 			
   </dependencies>
   <build>
